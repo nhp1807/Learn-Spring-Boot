@@ -32,7 +32,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee updateEmployee(Employee emp, int id) {
         Employee oldEmployee = repo.findById(id).orElse(null);
-        oldEmployee.setId(emp.getId());
         oldEmployee.setName(emp.getName());
         oldEmployee.setSalary(emp.getSalary());
         oldEmployee.setEmail(emp.getEmail());
